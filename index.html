@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07070b">
+<title>Mayank Saini — Creative Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070a;--ink:#f6f5f7;--muted:#9d9aa8;--line:#25242d;--violet:#8d63ff;--cyan:#4ed7ff;--gold:#e6c77b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.page{max-width:1280px;margin:auto;padding:0 5vw}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(7,7,10,.78);backdrop-filter:blur(20px);z-index:50}.logo{font:700 25px "Space Grotesk";letter-spacing:-.06em}.logo b{color:var(--gold)}.navlinks{display:flex;gap:30px;font-size:13px;color:#bbb8c3}.navlinks a:hover{color:#fff}.menu{display:none;border:1px solid var(--line);border-radius:50%;width:42px;height:42px;background:#0d0d12;color:white;font-size:19px}
+.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:60px;position:relative}.hero:before{content:"";position:absolute;width:650px;height:650px;left:-300px;top:80px;background:radial-gradient(circle,rgba(141,99,255,.22),transparent 68%);filter:blur(20px);pointer-events:none}.hero:after{content:"";position:absolute;width:500px;height:500px;right:-200px;bottom:0;background:radial-gradient(circle,rgba(78,215,255,.12),transparent 68%);filter:blur(20px);pointer-events:none}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.hero h1{font:700 clamp(68px,9.5vw,138px)/.83 "Space Grotesk";letter-spacing:-.085em;margin:26px 0}.hero h1 span{background:linear-gradient(110deg,#fff,#bca5ff 48%,#69ddff);-webkit-background-clip:text;color:transparent}.role{font-size:clamp(19px,2vw,27px);font-weight:600;margin:25px 0 12px}.lead{max-width:650px;color:var(--muted);font-size:15px;line-height:1.85}.actions{display:flex;gap:12px;margin:32px 0}.btn{padding:14px 19px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid var(--line)}.btn.primary{border:0;color:#08080b;background:linear-gradient(105deg,#e9cc82,#a678ff 60%,#56d6ff)}.btn:hover{transform:translateY(-2px)}
+.hero-right{position:relative;z-index:1}.frame{aspect-ratio:4/5;max-width:430px;margin:auto;border:1px solid #34313e;border-radius:32px;padding:12px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.015));box-shadow:0 40px 100px rgba(0,0,0,.5);position:relative;overflow:hidden}.frame-inner{height:100%;border-radius:23px;background:radial-gradient(circle at 50% 20%,#312052,#11131e 55%,#09090d);display:grid;place-items:center;color:#74707d;text-align:center;font-size:12px;letter-spacing:.2em}.frame-inner strong{display:block;color:#bdb8c8;font-size:14px;margin-bottom:8px}.badge{position:absolute;bottom:28px;left:28px;background:rgba(5,5,9,.75);border:1px solid #3b3944;backdrop-filter:blur(18px);padding:14px 16px;border-radius:16px;font-size:11px}.badge i{display:inline-block;width:7px;height:7px;background:#65ffae;border-radius:50%;margin-right:8px;box-shadow:0 0 12px #65ffae}.stats{display:flex;gap:35px;margin-top:35px}.stats b{display:block;font:700 25px "Space Grotesk"}.stats small{color:#85818d;font-size:9px;text-transform:uppercase;letter-spacing:.1em}
+section{padding:125px 0;border-top:1px solid var(--line)}.label{font-size:10px;color:#817d8a;letter-spacing:.2em;font-weight:700}.section-title{font:600 clamp(40px,5vw,70px)/.98 "Space Grotesk";letter-spacing:-.055em;margin:16px 0 30px}.section-title span{color:#a991ff}.copy{max-width:800px;color:var(--muted);line-height:1.9;font-size:15px}
+.about-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:90px}.about-side{font-size:12px;color:#77737e;line-height:1.8}.about-side strong{color:#ddd;display:block;font-size:16px;margin-bottom:5px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}.service{min-height:220px;border:1px solid var(--line);border-radius:22px;padding:24px;background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015));transition:.3s}.service:hover{transform:translateY(-6px);border-color:#4c465c}.num{color:var(--gold);font-size:10px}.service h3{font:600 20px "Space Grotesk";margin:55px 0 10px}.service p{font-size:12px;line-height:1.7;color:var(--muted)}
+.project-intro{display:flex;justify-content:space-between;align-items:end;gap:30px}.project-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:15px;margin-top:45px}.project{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#0c0c11}.project:nth-child(3){grid-column:span 2}.visual{min-height:290px;background:radial-gradient(circle at 25% 20%,rgba(141,99,255,.3),transparent 30%),linear-gradient(135deg,#191522,#0c1018);display:grid;place-items:center;position:relative}.project:nth-child(2) .visual{min-height:290px;background:radial-gradient(circle at 75% 20%,rgba(78,215,255,.18),transparent 32%),linear-gradient(135deg,#111521,#0a0a10)}.project:nth-child(3) .visual{min-height:360px;background:radial-gradient(circle at 65% 40%,rgba(230,199,123,.15),transparent 30%),linear-gradient(135deg,#18140f,#0b0b0d)}.visual span{font:700 11px "Space Grotesk";letter-spacing:.18em;color:#77737f}.project-info{padding:20px}.project-info small{color:var(--gold);font-size:9px;letter-spacing:.15em}.project-info h3{font:600 24px "Space Grotesk";margin:7px 0}.project-info p{color:var(--muted);font-size:12px;margin:0;line-height:1.6}
+.showcase{margin-top:18px;border:1px solid #39333f;border-radius:26px;padding:12px;background:linear-gradient(135deg,rgba(141,99,255,.09),rgba(78,215,255,.04))}.video-box{min-height:430px;border-radius:18px;background:#09090d;display:grid;place-items:center;position:relative;overflow:hidden}.video-box:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(141,99,255,.12),transparent 65%)}.play{width:76px;height:76px;border-radius:50%;border:1px solid #55515e;display:grid;place-items:center;font-size:25px;background:rgba(255,255,255,.05);z-index:1}.video-caption{position:absolute;bottom:22px;left:25px;font-size:11px;color:#aaa6b2;z-index:1}.edit-note{margin-top:18px;color:#77737f;font-size:11px}
+.tools{display:flex;flex-wrap:wrap;gap:9px;margin-top:35px}.tool{padding:11px 15px;border:1px solid var(--line);border-radius:999px;font-size:11px;color:#d1ced7;background:#0b0b10}
+.timeline{margin-top:45px;border:1px solid var(--line);border-radius:24px;padding:8px 25px}.row{display:grid;grid-template-columns:130px 1fr;gap:25px;padding:27px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}.year{font-size:10px;color:var(--gold);letter-spacing:.15em}.row h3{font:600 20px "Space Grotesk";margin:0 0 8px}.row p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.contact{border:1px solid #3a3440;border-radius:30px;padding:70px;background:radial-gradient(circle at 85% 15%,rgba(78,215,255,.15),transparent 28%),radial-gradient(circle at 15% 100%,rgba(141,99,255,.18),transparent 35%),#0b0b10}.contact h2{font:600 clamp(45px,6vw,82px)/.95 "Space Grotesk";letter-spacing:-.06em;max-width:850px;margin:18px 0}.contact h2 span{color:#a991ff}.contact p{max-width:650px;color:var(--muted);line-height:1.8}.contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.contact-links a{padding:12px 15px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#696571;font-size:10px;display:flex;justify-content:space-between;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:900px){.navlinks{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding:80px 0 110px}.hero-right{order:-1}.frame{max-width:330px}.services{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr;gap:25px}.project-grid{grid-template-columns:1fr}.project:nth-child(3){grid-column:auto}.project:nth-child(3) .visual{min-height:290px}}
+@media(max-width:600px){.page{padding:0 5vw}.nav{height:72px}.hero h1{font-size:70px}.stats{gap:18px;flex-wrap:wrap}.stats b{font-size:21px}.services{grid-template-columns:1fr}.project-intro{display:block}.video-box{min-height:300px}.timeline{padding:8px 18px}.row{grid-template-columns:1fr;gap:8px}.contact{padding:40px 25px}footer{display:block;line-height:2.1}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="nav">
+<a class="logo" href="#top">MS<b>.</b></a>
+<nav class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="#contact">Let's Connect</a><button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('mobile')">☰</button>
+</header>
+
+<main id="top">
+<section class="hero" style="border:0">
+<div>
+<div class="eyebrow">VIDEO · EDITING · SOCIAL MEDIA · DEHRADUN</div>
+<h1>Mayank<br><span>Saini.</span></h1>
+<div class="role">Video Production & Social Media Executive</div>
+<p class="lead">6+ years of hands-on experience in YouTube and digital content, with practical expertise across shooting, editing, thumbnails, scripting, social media and client-facing creative work.</p>
+<div class="actions"><a class="btn primary" href="#work">Explore My Work ↗</a><a class="btn" href="#contact">Contact Me</a></div>
+<div class="stats"><div><b>6+</b><small>Years Experience</small></div><div><b>1.4M+</b><small>Subscribers Built</small></div><div><b>360°</b><small>Content Workflow</small></div></div>
+</div>
+<div class="hero-right"><div class="frame"><div class="frame-inner"><div><strong>YOUR PHOTO</strong>ADD PROFILE IMAGE</div></div><div class="badge"><i></i> Available for creative opportunities</div></div></div>
+</section>
+
+<section id="about">
+<div class="about-grid"><div class="about-side"><strong>01 / ABOUT</strong>CREATIVE PRODUCTION<br>DIGITAL CONTENT<br>REAL ESTATE MARKETING</div><div><h2 class="section-title">I turn ideas into <span>visual stories.</span></h2><p class="copy">I'm Mayank Saini, a video production and social media professional based in Dehradun. My work sits at the intersection of shooting, editing, digital storytelling and social media execution.</p><p class="copy">Over 6+ years, I worked across the complete YouTube workflow — scripting, shooting, editing, thumbnails and publishing. My work with VSK Talent helped build an audience of 1.4M+ subscribers before the channel was transferred to a new owner.</p></div></div>
+</section>
+
+<section id="experience">
+<div class="label">02 / WHAT I DO</div><h2 class="section-title">From concept to <span>final publish.</span></h2>
+<div class="services">
+<div class="service"><span class="num">01</span><h3>Video Shooting</h3><p>On-location production for property, social media and digital campaigns.</p></div>
+<div class="service"><span class="num">02</span><h3>Video Editing</h3><p>Short-form and long-form edits focused on pacing, storytelling and platform-ready delivery.</p></div>
+<div class="service"><span class="num">03</span><h3>Social Media</h3><p>Content planning, publishing, creative coordination and day-to-day handling.</p></div>
+<div class="service"><span class="num">04</span><h3>Client Handling</h3><p>Professional communication, coordination and content requirements management.</p></div>
+</div>
+<div class="timeline">
+<div class="row"><div class="year">CURRENT</div><div><h3>IKAAYA Realty</h3><p>Video shooting · Editing · Social media handling · Client handling · PDF making · Property marketing</p></div></div>
+<div class="row"><div class="year">6+ YEARS</div><div><h3>VSK Talent — YouTube</h3><p>Complete content workflow including shooting, editing, thumbnails and scripting. The channel reached 1.4M+ subscribers before being transferred to a new owner.</p></div></div>
+</div>
+</section>
+
+<section id="work">
+<div class="project-intro"><div><div class="label">03 / SELECTED WORK</div><h2 class="section-title">A portfolio built to <span>grow.</span></h2></div><p class="copy">Add your actual videos, reels, photos, thumbnails and PDFs here whenever you are ready.</p></div>
+<div class="project-grid">
+<article class="project"><div class="visual"><span>ADD VIDEO THUMBNAIL</span></div><div class="project-info"><small>FEATURED VIDEO</small><h3>Your Best Video</h3><p>Replace this placeholder with your strongest editing or shooting sample.</p></div></article>
+<article class="project"><div class="visual"><span>PROJECT VISUAL</span></div><div class="project-info"><small>REAL ESTATE</small><h3>Tranquil Valley</h3><p>Property content and visual marketing project.</p></div></article>
+<article class="project"><div class="visual"><span>PROJECT VISUAL</span></div><div class="project-info"><small>REAL ESTATE</small><h3>Mayfair Highland</h3><p>Property marketing and social media content.</p></div></article>
+</div>
+<div class="showcase"><div class="video-box"><div class="play">▶</div><div class="video-caption">VIDEO SHOWCASE · DROP YOUR VIDEO LINK / FILE HERE</div></div></div>
+<p class="edit-note">Future update: replace any visual placeholder with an image, YouTube embed, MP4 video or project card. The page is intentionally structured for adding/removing work.</p>
+</section>
+
+<section id="skills">
+<div class="label">04 / SKILLS & TOOLS</div><h2 class="section-title">Hands-on creative <span>execution.</span></h2>
+<p class="copy">My strongest areas are shooting and editing, supported by social media execution, client coordination and digital content production.</p>
+<div class="tools"><span class="tool">Video Editing</span><span class="tool">Video Shooting</span><span class="tool">Social Media</span><span class="tool">Client Handling</span><span class="tool">PDF Making</span><span class="tool">YouTube</span><span class="tool">CapCut</span><span class="tool">Canva</span><span class="tool">Lightroom</span></div>
+</section>
+
+<section>
+<div class="label">05 / EDUCATION</div><h2 class="section-title">Academic background.</h2>
+<p class="copy">B.Sc. completed, followed by M.Sc. coursework before choosing to focus professionally on digital content, production and creative work.</p>
+</section>
+
+<section id="contact">
+<div class="contact"><div class="label">06 / CONTACT</div><h2>Let's create something <span>worth watching.</span></h2><p>Open to opportunities in real estate marketing, video shooting/editing, social media and creative production.</p><div class="contact-links"><a href="tel:+919105565976">+91 91055 65976</a><a href="mailto:smayanksaini111@gmail.com">smayanksaini111@gmail.com</a></div></div>
+</section>
+</main>
+<footer><span>© 2026 Mayank Saini</span><span>Video Production · Editing · Social Media</span></footer>
+</div>
+</body>
+</html>
